@@ -87,3 +87,12 @@ tags:
 categories:
 ---
 ```
+
+发布文章还是进入blog目录 hexo-client中的发布按钮 我是觉得没用的
+
+```bash
+hexo clean
+hexo g
+hexo deploy
+hexo b
+```
