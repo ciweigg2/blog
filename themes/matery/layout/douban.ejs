@@ -1,0 +1,44 @@
+<%- partial('_partial/post-cover') %>
+
+<style>
+    .hexo-douban-picture img {
+        width: 100%;
+    }
+</style>
+
+<main class="content">
+    <div id="contact" class="container chip-container">
+        <div class="card">
+            <div class="card-content" style="padding: 30px">
+                <h1 style="margin: 10px 0 10px 0px;"><%= page.title %></h1>
+                <%- page.content %>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content" style="text-align: center">
+                <h3 style="margin: 5px 0 5px 5px;">如果你有好的内容推荐，欢迎在下面留言！</h3>
+            </div>
+         </div>
+        <div class="card">
+            <% if (theme.gitalk && theme.gitalk.enable) { %>
+            <%- partial('_partial/gitalk') %>
+            <% } %>
+
+            <% if (theme.gitment.enable) { %>
+            <%- partial('_partial/gitment') %>
+            <% } %>
+
+            <% if (theme.disqus.enable) { %>
+            <%- partial('_partial/disqus') %>
+            <% } %>
+
+            <% if (theme.livere && theme.livere.enable) { %>
+            <%- partial('_partial/livere') %>
+            <% } %>
+
+            <% if (theme.valine && theme.valine.enable) { %>
+            <%- partial('_partial/valine') %>
+            <% } %>
+        </div>
+    </div>
+</main>

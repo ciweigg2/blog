@@ -1,0 +1,33 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: 小马哥
+      link: https://mercyblitz.github.io/
+      avatar: https://ciwei2.cn-sh2.ufileos.com/friend-1.jpg
+      descr: 这里将深入探讨相关技术,架构
+    2:
+      name: 周立博客
+      link: http://www.itmuch.com/
+      avatar: https://ciwei2.cn-sh2.ufileos.com/friend-2.jpg
+      descr: 术专家；目前在杭州阿里巴巴
+    3:
+      name: 鹏磊大神
+      link: https://www.souyunku.com/
+      avatar: https://ciwei2.cn-sh2.ufileos.com/friend-3.jpg
+      descr: 专注于微服务分布式的一位专家
+    4:
+      name: 程序猿DD
+      link: http://blog.didispace.com/
+      avatar: https://ciwei2.cn-sh2.ufileos.com/friend-4.jpg 
+      descr: SpringCloud 微服务架构落地
+    5:
+      name: 二丫
+      link: http://www.eryajf.net
+      avatar: https://ciwei2.cn-sh2.ufileos.com/friend-5.jpg
+      descr: 运维专家里面很多运维知识
+    6:
+      name: dubbo
+      link: https://github.com/apache/incubator-dubbo-spring-boot-project
+      avatar: https://ciwei2.cn-sh2.ufileos.com/friend-6.jpg
+      descr: dubbo的一些例子

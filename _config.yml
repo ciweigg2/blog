@@ -1,0 +1,190 @@
+# Site
+title: 如果没有你
+subtitle: Ciwei
+description: 躺在你学校的操场看星空 教室里的灯还亮着你没走 记得 我写给你的情书 都什么年代了 到现在我还在写着 总有一天总有一年会发现 有人默默的陪在你的身边
+keywords:
+author: Ciwei
+language: zh-CN
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://ciweigg2.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+highlight:
+  enable: false
+  line_number: false
+  auto_detect: false
+  tab_replace:
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: true    # default false
+  custom_css: 
+
+search:
+  path: search.xml
+  field: post
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
+Plugins:
+- hexo-generator-baidu-sitemap
+- hexo-generator-sitemap
+
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 12
+  order_by: -date
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 12
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: matery
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+- type: git
+  repo:
+    github:  git@github.com:ciweigg2/ciweigg2.github.io.git
+  branch: master
+#- type: baidu_url_submitter
+
+backup:
+  type: git
+  message: update backup
+  repository:
+    origin: git@github.com:ciweigg2/blog.git,master
+    
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
+
+# baidu submit
+baidu_url_submit:
+  count: 80                                      # 提交最新的一个链接
+  host: ciweigg2.github.io     # 在百度站长平台中注册的域名
+  token: XXXXXXXXXXXXXXX    # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt                # 文本文档的地址， 新链接会保存在此文本文档里
+
+
+
+live2d:
+  enable: false
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  # model:
+  #   use: live2d-widget-model-shizuku
+  model:
+    use: live2d-widget-model-wanko
+  display:
+    position: left
+    width: 150
+    height: 200
+  mobile:
+    show: false
+  react:
+    opacity: 0.7
+   
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+    # font-size: 5em
+    # font-weight: bold
+  customEmojis:
+
+# marked:
+#   gfm: true
+#   pedantic: false
+#   breaks: true
+#   smartLists: true
+#   smartypants: true
+#   modifyAnchors: ''
+#   autolink: true
+#   sanitizeUrl: false
+#   headerIds: true
+
+# lazyload configuration  2019.08.14
+lazyload:
+  enable: false 
+  onlypost: true
+  loadingImg: https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg    # eg ./images/loading.gif
+
+douban:
+  user: 206182823
+  builtin: true
+  book:
+    title: '读书学习'
+    quote: '成功的人必定会学到老'
+  movie:
+    title: '闲情雅致'
+    quote: '打发无聊的时间只能看看电影了'
+  game:
+    title: '放松心情'
+    quote: '玩玩游戏放松放松开心开心生活'
+  timeout: 10000

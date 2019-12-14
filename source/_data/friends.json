@@ -1,0 +1,37 @@
+[{
+    "avatar": "https://ciwei2.cn-sh2.ufileos.com/friend-1.jpg",
+    "name": "小马哥",
+    "introduction": "这里将深入探讨相关技术,架构",
+    "url": "https://mercyblitz.github.io/",
+    "title": "前去学习"
+}, {
+    "avatar": "https://ciwei2.cn-sh2.ufileos.com/friend-2.jpg",
+    "name": "周立博客",
+    "introduction": "技术专家；目前在杭州阿里巴巴",
+    "url": "http://www.itmuch.com/",
+    "title": "前去学习"
+}, {
+    "avatar": "https://ciwei2.cn-sh2.ufileos.com/friend-3.jpg",
+    "name": "鹏磊大神",
+    "introduction": "专注于微服务分布式的一位专家",
+    "url": "https://www.souyunku.com/",
+    "title": "前去学习"
+}, {
+    "avatar": "https://ciwei2.cn-sh2.ufileos.com/friend-4.jpg",
+    "name": "程序猿DD",
+    "introduction": "SpringCloud 微服务架构落地",
+    "url": "http://blog.didispace.com/",
+    "title": "前去学习"
+}, {
+    "avatar": "https://ciwei2.cn-sh2.ufileos.com/friend-5.jpg",
+    "name": "二丫",
+    "introduction": "运维专家里面很多运维知识",
+    "url": "http://www.eryajf.net",
+    "title": "前去学习"
+}, {
+    "avatar": "https://ciwei2.cn-sh2.ufileos.com/friend-6.jpg",
+    "name": "dubbo",
+    "introduction": "dubbo的一些例子",
+    "url": "https://github.com/apache/incubator-dubbo-spring-boot-project",
+    "title": "前去学习"
+}]
