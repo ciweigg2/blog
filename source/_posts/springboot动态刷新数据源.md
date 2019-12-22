@@ -14,7 +14,6 @@ tags:
   - 动态数据源
 categories:
   - 综合
-originContent: ''
 date: 2019-12-17 16:54:24
 ---
 
@@ -344,4 +343,4 @@ http://localhost:8080/datasource/refresh
 
 http://localhost:8080/api/list
 
-demo：https://github.com/ciweigg2/springboot-mybatis-quick
+demo：https://github.com/ciweigg2/springboot-mybatis-quick/tree/master
