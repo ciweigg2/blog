@@ -55,7 +55,7 @@ curl  https://get.acme.sh | sh
 cd ~/.acme.sh/
 ```
 
-并创建 一个 bash 的 alias, 方便你的使用: aliasacme.sh=~/.acme.sh/acme.sh
+并创建 一个 bash 的 alias, 方便你的使用: alias acme.sh=~/.acme.sh/acme.sh
 
 2). 自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书.
 
