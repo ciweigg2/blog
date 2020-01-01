@@ -1,8 +1,21 @@
-title: 【自定义starter实现】Spring Boot自定义starter实现
-date: 2019-07-28 17:04:35
-tags: [springboot]
-categories: [综合]
 ---
+title: 【自定义starter实现】Spring Boot自定义starter实现
+author: Ciwei
+img: ''
+coverImg: ''
+top: false
+cover: false
+toc: true
+mathjax: false
+password: ''
+summary: ''
+tags:
+  - springboot
+categories:
+  - 综合
+date: 2019-07-28 17:04:35
+---
+
 ### 介绍
 
 “约定优于配置”是Spring Boot倡导的一个思想，而其自动配置的特性则恰好体现了这一思想。有了自动配置，不仅简化了Maven的依赖配置，更重要的是摆脱了以往使用Spring框架开发时，所必须编写的一堆繁琐的xml配置文件。而要使用自动配置，我们也只需要简单的在依赖中引入Starter依赖即可，例如，要在Spring Boot中启用Spring MVC，我们只需要在pom文件中引入spring-boot-starter-web依赖即可，其他配置将Spring Boot自动完成。
@@ -18,9 +31,10 @@ categories: [综合]
 
 ```
 <dependency>
-    <groupIdframework.boot</groupId>
-    <artifactId>spring-boot-autoconfiguautoconfigure</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-autoconfigure</artifactId>
 </dependency>
+
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-configuration-processor</artifactId>
