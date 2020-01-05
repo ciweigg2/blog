@@ -107,10 +107,10 @@ spring:
 
 每次启动项目如果存在可更新的脚本信息，执行完成后会自动在`flyway_schema_history`表内添加一条记录。
 
-| installed_rank | version | description | type | script               | checksum   | installed_by | installed_on        | execute_time | success |
-| :------------- | :------ | :---------- | :--- | :------------------- | :--------- | :----------- | :------------------ | :----------- | :------ |
-| 1              | 1       | init        | SQL  | V1__init.sql         | 2034194600 | root         | 2019-10-23 21:44:36 | 17           | 1       |
-| 2              | 1.1     | add logging | SQL  | V1.1_add_logging.sql | 1859098444 | root         | 2019-10-23 21:46:50 | 54           | 1       |
+| installed_rank | version | description | type | script               |
+| :------------- | :------ | :---------- | :--- | :------------------- |
+| 1              | 1       | init        | SQL  | V1__init.sql         | 
+| 2              | 1.1     | add logging | SQL  | V1.1_add_logging.sql |
 
 ## 敲黑板，划重点
 
