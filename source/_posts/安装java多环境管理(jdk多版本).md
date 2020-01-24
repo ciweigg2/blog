@@ -1,9 +1,27 @@
-title: 安装java多环境管理(jdk多版本sdkman)
-date: 2019-11-18 10:41:48
-tags: [sdkman,java]
-categories: [综合]
 ---
+title: 安装java多环境管理(jdk多版本sdkman)
+author: Ciwei
+img: ''
+coverImg: ''
+top: false
+cover: false
+toc: true
+mathjax: false
+password: ''
+summary: ''
+tags:
+  - sdkman
+  - java
+categories:
+  - 综合
+date: 2019-11-18 10:41:48
+---
+
 ### windows安装jdk多版本
+
+mac系统可以使用shogun界面管理sdkman
+
+github：https://github.com/yusuke/shogun
 
 #### 安装Chocolatey
 

@@ -1,8 +1,21 @@
-title: IDEA插件
-date: 2018-11-02 17:36:59
-tags: [idea]
-categories: [IDEA插件]
 ---
+title: IDEA插件
+author: Ciwei
+img: ''
+coverImg: ''
+top: false
+cover: false
+toc: true
+mathjax: false
+password: ''
+summary: ''
+tags:
+  - idea
+categories:
+  - IDEA插件
+date: 2018-11-02 17:36:59
+---
+
 ## IDEA常用工具
 
 <!--more-->
@@ -180,3 +193,17 @@ JBLSpringBootAppGen 简介
 
 将光标放置到想要生成注释的类、方法或者属性上，然后按下快捷键ctrl \或者command \，即可生成注释，你的方法名起的越贴切，注释越得体。
 将光标放置到想要生成注释的类上，然后按下快捷键ctrl shift \或者command shift \，即可批量生成文档注释
+
+### Commit-Message-Create
+
+git提交规范 我觉得不错
+
+![image.png](/images/2020/01/22/e11d9830-3ce2-11ea-a925-b77091ad69f9.png)
+
+![image.png](/images/2020/01/22/d3d81290-3ce2-11ea-a925-b77091ad69f9.png)
+
+![image.png](/images/2020/01/22/04a11610-3ce3-11ea-a925-b77091ad69f9.png)
+
+以后提交代码要严格要求自己了
+
+就用这个模板

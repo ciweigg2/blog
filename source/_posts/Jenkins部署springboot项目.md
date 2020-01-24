@@ -1,9 +1,21 @@
-cover: http://ciwei2.cn-sh2.ufileos.com/59.jpg
-title: Jenkins部署springboot项目
-date: 2019-02-22 22:11:42
-tags: [jenkins]
-categories: [jenkins]
 ---
+title: Jenkins部署springboot项目
+author: Ciwei
+img: ''
+coverImg: ''
+top: false
+cover: false
+toc: true
+mathjax: false
+password: ''
+summary: ''
+tags:
+  - jenkins
+categories:
+  - jenkins
+date: 2019-02-22 22:11:42
+---
+
 ### docker启动的jenkins
 
 挂载的目录是：docker run -d --name myjenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_node:/var/jenkins_home jenkins/jenkins
@@ -128,6 +140,8 @@ chmod -R 777 *.sh
 ./stop.sh
 ./start.sh
 ```
+
+如果多模块可以使用**/*.war Remove prefix不用配置了
 
 ![](/images/20190225214856.png)
 
