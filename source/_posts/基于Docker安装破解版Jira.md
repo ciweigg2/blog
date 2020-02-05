@@ -1,8 +1,21 @@
-title: 基于Docker安装破解版Jira
-date: 2019-08-19 21:17:28
-tags: [jira]
-categories: [综合]
 ---
+title: 基于Docker安装破解版Jira
+author: Ciwei
+img: ''
+coverImg: ''
+top: false
+cover: false
+toc: true
+mathjax: false
+password: ''
+summary: ''
+tags:
+  - jira
+categories:
+  - 综合
+date: 2019-08-19 21:17:28
+---
+
 ### 介绍
 
 插件基本都收费 所以决定重建Jira软件系统，并采用Docker来实现破解版的Jira安装
@@ -18,31 +31,28 @@ categories: [综合]
 一定要安装jira-software(不是jira),否则没有agile
 
 ```
-[root@iZo7e61fz42ik0Z ~]# docker pull dchevell/jira-software:7.13.0
+docker pull dchevell/jira-software:7.13.6
 ```
 
 2、运行容器
 
 ```
-[root@iZo7e61fz42ik0Z data]# docker run -d -it -p  8080:8080  --privileged  -m 4096M -v /data/jira-data:/var/atlassian/application-data/jira  -v /etc/localtime:/etc/localtime --name jira dchevell/jira-software:7.13.0
+docker run -d -it -p  8080:8080  --privileged  -m 4096M -v /data/jira-data:/var/atlassian/application-data/jira  -v /etc/localtime:/etc/localtime --name jira dchevell/jira-software:7.13.6
 ```
 
 3、拷贝文件到容器内
 
 ```
-# 下载3个文件
-[root@iZo7e61fz42ik0Z data]# wget https://github.com/hlwojiv/some-software/raw/master/Jira/mysql-connector-java-5.1.25-bin.jar
-[root@iZo7e61fz42ik0Z data]# wget https://github.com/hlwojiv/some-software/raw/master/Jira/atlassian-universal-plugin-manager-plugin-2.22.4.jar
-[root@iZo7e61fz42ik0Z data]# wget https://github.com/hlwojiv/some-software/raw/master/Jira/atlassian-extras-3.2.jar
+# 下载3个文件(mysql-connector-java-5.1.25-bin.jar,atlassian-universal-plugin-manager-plugin-2.22.4.jar,atlassian-extras-3.2.jar)
+git clone https://github.com/hlwojiv/some-software.git
+cd some-software-master/Jira/
 # 拷贝mysql-connector
-[root@iZo7e61fz42ik0Z data]# docker cp mysql-connector-java-5.1.25-bin.jar jira:/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/
+docker cp mysql-connector-java-5.1.25-bin.jar jira:/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/
 # 进入容器修改mysql-connector的权限
-[root@iZo7e61fz42ik0Z data]# docker exec -it jira bash
-bash-4.4# chmod 755 /opt/atlassian/jira/atlassian-jira/WEB-INF/lib/mysql-connector-java-5.1.25-bin.jar
-bash-4.4# exit
+docker exec -it jira bash
+chmod 755 /opt/atlassian/jira/atlassian-jira/WEB-INF/lib/mysql-connector-java-5.1.25-bin.jar
 # 重启容器
-[root@iZo7e61fz42ik0Z data]# docker restart jira
-jira
+docker restart jira
 ```
 
 3、Web设置
@@ -55,7 +65,7 @@ jira
 
 申请许可证关键字，点击「生成Jira试用许可证」
 
-需要注册账号，注册完之后重新回到这个页面，选择相关信息，点击「Generate License」
+需要注册账号，注册完之后重新回到这个页面，选择Jira Software (Server)，点击「Generate License」
 
 点击「Yes」
 
@@ -69,20 +79,19 @@ jira
 
 ```
 # 拷贝atlassian-extras到容器内
-[root@iZo7e61fz42ik0Z data]# docker cp atlassian-extras-3.2.jar jira:/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/
+docker cp atlassian-extras-3.2.jar jira:/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/
 # 进入容器设置atlassian-extras的权限
-[root@iZo7e61fz42ik0Z data]# docker exec -it jira bash
-bash-4.4# chmod 755 /opt/atlassian/jira/atlassian-jira/WEB-INF/lib/atlassian-extras-3.2.jar
+docker exec -it jira bash
+chmod 755 /opt/atlassian/jira/atlassian-jira/WEB-INF/lib/atlassian-extras-3.2.jar
 # 重启容器
-[root@iZo7e61fz42ik0Z data]# docker restart jira
-jira
+docker restart jira
 # 拷贝插件到容器内
-[root@iZo7e61fz42ik0Z data]# docker cp atlassian-universal-plugin-manager-plugin-2.22.4.jar jira:/opt/atlassian/jira/atlassian-jira/WEB-INF/atlassian-bundled-plugins/
+docker cp atlassian-universal-plugin-manager-plugin-2.22.4.jar jira:/opt/atlassian/jira/atlassian-jira/WEB-INF/atlassian-bundled-plugins/
 # 进入容器内修改插件的属性
-[root@iZo7e61fz42ik0Z data]# docker exec -it jira bash
-bash-4.4# chmod 755  /opt/atlassian/jira/atlassian-jira/WEB-INF/atlassian-bundled-plugins/atlassian-universal-plugin-manager-plugin-2.22.4.jar
+docker exec -it jira bash
+chmod 755 /opt/atlassian/jira/atlassian-jira/WEB-INF/atlassian-bundled-plugins/atlassian-universal-plugin-manager-plugin-2.22.4.jar
 # 删除另一个插件
-bash-4.4# rm -rf /opt/atlassian/jira/atlassian-jira/WEB-INF/atlassian-bundled-plugins/atlassian-universal-plugin-manager-plugin-2.22.9.jar
+rm -rf /opt/atlassian/jira/atlassian-jira/WEB-INF/atlassian-bundled-plugins/atlassian-universal-plugin-manager-plugin-2.22.9.jar
 ```
 
 破解结束，进入Jira下载任意插件，申请试用，自动破解
